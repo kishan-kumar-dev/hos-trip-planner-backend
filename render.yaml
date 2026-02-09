@@ -2,5 +2,5 @@ services:
   - type: web
     name: hos-trip-planner-backend
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn server.wsgi:application
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn server.server.wsgi:application
