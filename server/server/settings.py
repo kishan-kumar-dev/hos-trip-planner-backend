@@ -3,10 +3,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "django-insecure-demo-key"
-
 DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]  # For development / Render, you can whitelist hosts
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -19,7 +17,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
 
-    "trips",
+    "trips",  # app inside inner server folder
 ]
 
 MIDDLEWARE = [
